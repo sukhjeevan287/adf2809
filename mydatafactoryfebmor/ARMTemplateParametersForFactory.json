@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "mydatafactoryfebmor"
+		},
+		"AzureDataLakeStorageLS_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabaseLS_password": {
+			"value": ""
+		},
+		"AzureSqlDatabaseNewLS_password": {
+			"value": ""
+		},
+		"AzureDataLakeStorageLS_properties_typeProperties_url": {
+			"value": "https://blobstorageforademorning.dfs.core.windows.net/"
+		},
+		"AzureSqlDatabaseLS_properties_typeProperties_server": {
+			"value": "devmorningbatch.database.windows.net"
+		},
+		"AzureSqlDatabaseLS_properties_typeProperties_database": {
+			"value": "AdventureWorks"
+		},
+		"AzureSqlDatabaseLS_properties_typeProperties_userName": {
+			"value": "dbadmin"
+		},
+		"AzureSqlDatabaseNewLS_properties_typeProperties_server": {
+			"value": "trainingdbdev.database.windows.net"
+		},
+		"AzureSqlDatabaseNewLS_properties_typeProperties_database": {
+			"value": "adventureworks"
+		},
+		"AzureSqlDatabaseNewLS_properties_typeProperties_userName": {
+			"value": "dbadmin"
+		}
+	}
+}
