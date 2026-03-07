@@ -1,0 +1,31 @@
+{
+	"name": "DailyDataPull",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "WatermarkConcept",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Week",
+				"interval": 1,
+				"startTime": "2026-03-03T00:00:00",
+				"endTime": "2026-03-04T16:13:00",
+				"timeZone": "Eastern Standard Time",
+				"schedule": {
+					"weekDays": [
+						"Sunday",
+						"Wednesday"
+					]
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,20 @@
+{
+	"name": "MetadataDrivenCopyTask_i2x_ControlDS",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabaseNewLS",
+			"type": "LinkedServiceReference"
+		},
+		"folder": {
+			"name": "MetadataDrivenCopyTask_i2x_20260303"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "MainControlTable_i2x"
+		}
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}

@@ -1,0 +1,25 @@
+{
+	"name": "Trigger_3gd",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Stopped",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "MetadataDrivenCopyTask_3gd_TopLevel",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Hour",
+				"interval": 8,
+				"startTime": "2026-03-05T02:45:00Z",
+				"endTime": "2026-03-06T02:45:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}

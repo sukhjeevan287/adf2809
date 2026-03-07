@@ -1,0 +1,9 @@
+{
+	"name": "mydatafactoryfebmor",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "b5de85c7-49a0-46d0-8a7e-eca43b4fddef",
+		"tenantId": "5ed523eb-592f-430c-b127-c3e7fc714999"
+	}
+}
