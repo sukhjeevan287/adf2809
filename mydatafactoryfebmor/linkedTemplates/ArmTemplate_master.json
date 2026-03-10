@@ -7,10 +7,6 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "mydatafactoryfebmor"
 		},
-		"AzureDataLakeStorageLS_accountKey": {
-			"type": "secureString",
-			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorageLS'"
-		},
 		"AzureSqlDatabaseLS_password": {
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'AzureSqlDatabaseLS'"
@@ -22,6 +18,10 @@
 		"AzureDataLakeStorageLS_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://blobstorageforademorning.dfs.core.windows.net/"
+		},
+		"AzureKeyVaultLS_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://keyvaultdevmorning.vault.azure.net/"
 		},
 		"AzureSqlDatabaseLS_properties_typeProperties_server": {
 			"type": "string",
@@ -46,6 +46,10 @@
 		"AzureSqlDatabaseNewLS_properties_typeProperties_userName": {
 			"type": "string",
 			"defaultValue": "dbadmin"
+		},
+		"RestServiceDS_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://jsonplaceholder.typicode.com/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -74,9 +78,6 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"AzureDataLakeStorageLS_accountKey": {
-						"value": "[parameters('AzureDataLakeStorageLS_accountKey')]"
-					},
 					"AzureSqlDatabaseLS_password": {
 						"value": "[parameters('AzureSqlDatabaseLS_password')]"
 					},
@@ -85,6 +86,9 @@
 					},
 					"AzureDataLakeStorageLS_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorageLS_properties_typeProperties_url')]"
+					},
+					"AzureKeyVaultLS_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVaultLS_properties_typeProperties_baseUrl')]"
 					},
 					"AzureSqlDatabaseLS_properties_typeProperties_server": {
 						"value": "[parameters('AzureSqlDatabaseLS_properties_typeProperties_server')]"
@@ -103,6 +107,9 @@
 					},
 					"AzureSqlDatabaseNewLS_properties_typeProperties_userName": {
 						"value": "[parameters('AzureSqlDatabaseNewLS_properties_typeProperties_userName')]"
+					},
+					"RestServiceDS_properties_typeProperties_url": {
+						"value": "[parameters('RestServiceDS_properties_typeProperties_url')]"
 					}
 				}
 			},
@@ -126,6 +133,26 @@
 			},
 			"dependsOn": [
 				"[resourceId('Microsoft.Resources/deployments', 'mydatafactoryfebmor_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "mydatafactoryfebmor_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'mydatafactoryfebmor_ArmTemplate_1')]"
 			]
 		}
 	]

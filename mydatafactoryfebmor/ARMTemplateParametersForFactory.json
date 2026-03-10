@@ -5,9 +5,6 @@
 		"factoryName": {
 			"value": "mydatafactoryfebmor"
 		},
-		"AzureDataLakeStorageLS_accountKey": {
-			"value": ""
-		},
 		"AzureSqlDatabaseLS_password": {
 			"value": ""
 		},
@@ -16,6 +13,9 @@
 		},
 		"AzureDataLakeStorageLS_properties_typeProperties_url": {
 			"value": "https://blobstorageforademorning.dfs.core.windows.net/"
+		},
+		"AzureKeyVaultLS_properties_typeProperties_baseUrl": {
+			"value": "https://keyvaultdevmorning.vault.azure.net/"
 		},
 		"AzureSqlDatabaseLS_properties_typeProperties_server": {
 			"value": "devmorningbatch.database.windows.net"
@@ -34,6 +34,9 @@
 		},
 		"AzureSqlDatabaseNewLS_properties_typeProperties_userName": {
 			"value": "dbadmin"
+		},
+		"RestServiceDS_properties_typeProperties_url": {
+			"value": "https://jsonplaceholder.typicode.com/"
 		}
 	}
 }
